@@ -23,13 +23,13 @@ class CreateApiTokenCommand extends Command
 
         $token = $user->createToken('server_api_token');
 
-        $this->info("Token generated {$token->plainTextToken}");
+        $this->info("Token generated $token->plainTextToken");
     }
 
     private function searchUsers(): Closure
     {
         return fn(string $value) => config('lms.user_model')::query()
-            ->where('email', 'LIKE', "%{$value}%")
+            ->where('email', 'LIKE', "%$value%")
             ->pluck()
             ->toArray();
     }

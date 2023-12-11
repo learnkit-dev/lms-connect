@@ -4,8 +4,9 @@ namespace LearnKit\LmsConnect\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use LearnKit\Lms\Models\Team;
 
-/** @mixin \LearnKit\Lms\Models\Team */
+/** @mixin Team */
 class TeamResource extends JsonResource
 {
     public function toArray(Request $request): array
