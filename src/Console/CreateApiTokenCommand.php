@@ -16,7 +16,10 @@ class CreateApiTokenCommand extends Command
     {
         $user = search(
             label: 'Please select a user',
-            options: $this->searchUsers()
+            options: fn(string $value) => config('lms.user_model')::query()
+                ->where('email', 'LIKE', "%$value%")
+                ->pluck('email', 'id')
+                ->toArray()
         );
 
         $user = config('lms.user_model')::find($user);
@@ -24,13 +27,5 @@ class CreateApiTokenCommand extends Command
         $token = $user->createToken('server_api_token');
 
         $this->info("Token generated $token->plainTextToken");
-    }
-
-    private function searchUsers(): Closure
-    {
-        return fn(string $value) => config('lms.user_model')::query()
-            ->where('email', 'LIKE', "%$value%")
-            ->pluck()
-            ->toArray();
     }
 }
