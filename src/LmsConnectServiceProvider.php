@@ -3,7 +3,6 @@
 namespace LearnKit\LmsConnect;
 
 use Illuminate\Support\ServiceProvider;
-use LearnKit\LmsConnect\Contracts\GroupRepository;
 
 class LmsConnectServiceProvider extends ServiceProvider
 {
