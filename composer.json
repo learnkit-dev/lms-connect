@@ -1,0 +1,51 @@
+{
+    "name": "learnkit/lms-connect",
+    "description": "Connect package for CursusKit",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "LearnKit\\LmsConnect\\": "src/",
+            "LearnKit\\LmsConnect\\Tests\\": "tests/src",
+            "LearnKit\\LmsConnect\\Tests\\Database\\Factories\\": "tests/database/factories"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sebastiaan Kloos",
+            "email": "sebastiaan@learnkit.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0",
+        "learnkit/laravel-lms": "^3.0",
+        "laravel/pennant": "^v1.0.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^v2.2.0",
+        "pestphp/pest-plugin-laravel": "^v2.2.0",
+        "orchestra/testbench": "^8.0.0",
+        "spatie/laravel-ray": "^1.33",
+        "laravel/sanctum": "^v3.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LearnKit\\LmsConnect\\LmsConnectServiceProvider"
+            ]
+        }
+    },
+    "repositories": {
+        "learnkit/laravel-lms": {
+            "type": "composer",
+            "url": "https://cursuskit.pkgdi.st"
+        }
+    },
+    "minimum-stability": "dev"
+}
