@@ -7,6 +7,12 @@ use LearnKit\Lms\Contracts\PluginContract;
 
 class ConnectPlugin extends BasePlugin implements PluginContract
 {
+    public static function getComposerName(): string
+    {
+        return 'learnkit/lms-connect';
+    }
+
+
     public static function getCode(): string
     {
         return 'connect';
