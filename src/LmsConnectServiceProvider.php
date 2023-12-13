@@ -15,6 +15,10 @@ class LmsConnectServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        if (! class_exists(PluginManager::class)) {
+            return;
+        }
+
         PluginManager::register(ConnectPlugin::class);
 
         $this->commands([
