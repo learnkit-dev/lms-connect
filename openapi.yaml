@@ -1,0 +1,61 @@
+openapi: "3.0.2"
+info:
+  title: LMS connect
+  version: "1.0.0"
+servers:
+  - url: https://cursuskit.test/lms-connect/api/v1
+paths:
+  /{team}/groups:
+    get:
+      summary: Get all groups for a given team
+      description: You can get all the groups for a given team.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    properties:
+                      id:
+                        type: string
+                      name:
+                        type: string
+                      users_count:
+                        type: integer
+                        description: Counts the users in the group
+                      team_id:
+                        type: string
+                      created_at:
+                        type: string
+                      updated_at:
+                        type: string
+  /{team}/groups/scores:
+    get:
+      summary: Get all the groups with their score for a given team
+      description: It returns all the scores for the groups in a team.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    properties:
+                      id:
+                        type: string
+                      name:
+                        type: string
+                      users_count:
+                        type: integer
+                        description: Counts the users in the group
+                      users_started:
+                        type: integer
+                        description: Counts the users who started a course in the group
+                      users_achieved:
+                        type: integer
+                        description: Counts the users who completed courses in the group
