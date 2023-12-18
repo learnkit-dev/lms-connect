@@ -13,5 +13,17 @@
             <a href="Groups.md" type="start"></a>
             <a href="Groups-Scores.md" type="start"></a>
         </spotlight>
+
+        <primary>
+            <title>Primary</title>
+            <a href="Groups.md" type="start"></a>
+            <a href="Groups-Scores.md" type="start"></a>
+        </primary>
+
+        <secondary>
+            <title>Secondary</title>
+            <a href="Groups.md" type="start"></a>
+            <a href="Groups-Scores.md" type="start"></a>
+        </secondary>
     </section-starting-page>
 </topic>
