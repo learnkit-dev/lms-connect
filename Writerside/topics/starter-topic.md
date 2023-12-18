@@ -1,3 +1,6 @@
+<card-summary>A quick start guide.</card-summary>
+<link-summary>A quick start guide.</link-summary>
+
 # Getting started
 
 ## Installation

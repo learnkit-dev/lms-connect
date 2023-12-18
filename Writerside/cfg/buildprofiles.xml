@@ -1,0 +1,13 @@
+<buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <variables>
+        <primary-color>forest</primary-color>
+        <product-web-url>https://cursuskit.nl/plugins/lms-connect</product-web-url>
+    </variables>
+    <footer>
+        <social type="blog" href="https://github.com/learnkit-dev" />
+        <copyright>CursusKit 2016 - 2023</copyright>
+        <link href="https://cursuskit.nl">CursusKit</link>
+        <link href="https://cursuskit.nl/plugins">Plugins</link>
+    </footer>
+</buildprofiles>

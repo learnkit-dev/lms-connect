@@ -6,24 +6,24 @@
        title="Endpoints" id="Endpoints" help-id="Endpoints-2">
 
     <section-starting-page>
-        <title>Endpoints</title>
+        <title>Recommended endpoints</title>
         <description>Our API exposes a wide range of cool endpoints you can use.</description>
 
         <spotlight>
-            <a href="Groups.md" type="start"></a>
-            <a href="Groups-Scores.md" type="start"></a>
+            <a href="Groups.md" type="world"></a>
+            <a href="Groups-Scores.md" type="world"></a>
         </spotlight>
 
         <primary>
-            <title>Primary</title>
-            <a href="Groups.md" type="start"></a>
-            <a href="Groups-Scores.md" type="start"></a>
+            <title>New endpoints</title>
+            <a href="Users.md" type="community"></a>
+            <a href="Health.md" type="cross-check"></a>
         </primary>
 
         <secondary>
-            <title>Secondary</title>
-            <a href="Groups.md" type="start"></a>
-            <a href="Groups-Scores.md" type="start"></a>
+            <title>Reference</title>
+            <a href="starter-topic.md" type="start"></a>
+            <a href="Support.md" type="support"></a>
         </secondary>
     </section-starting-page>
 </topic>

@@ -5,6 +5,20 @@ info:
 servers:
   - url: https://cursuskit.test/lms-connect/api/v1
 paths:
+  /health:
+    get:
+      summary: Get the health of the connect plugin
+      description: This endpoint should return status 'ok' when installed.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
   /{team}/groups:
     get:
       summary: Get all groups for a given team
@@ -59,3 +73,25 @@ paths:
                       users_achieved:
                         type: integer
                         description: Counts the users who completed courses in the group
+  /{team}/users:
+    get:
+      summary: Get all the users for a given team
+      description: It returns all the users in a team.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    properties:
+                      id:
+                        type: string
+                      name:
+                        type: string
+                      email:
+                        type: string
+                      phone:
+                        type: string

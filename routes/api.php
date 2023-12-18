@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use LearnKit\LmsConnect\Controllers\Groups\ListGroupsController;
 use LearnKit\LmsConnect\Controllers\Groups\ListGroupScoresController;
+use LearnKit\LmsConnect\Controllers\HealthController;
 use LearnKit\LmsConnect\Controllers\Users\ListUsersController;
 use LearnKit\LmsConnect\Middleware\PluginEnabledMiddleware;
 
@@ -11,6 +12,8 @@ Route::group([
     'middleware' => ['api', 'throttle:api', 'auth:sanctum'],
     'as' => 'lms-connect.',
 ], function () {
+
+    Route::get('health', HealthController::class)->name('health');
 
     Route::prefix('{team}')
         ->as('team.')
