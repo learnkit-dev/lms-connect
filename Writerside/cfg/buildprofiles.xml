@@ -2,7 +2,9 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <variables>
         <primary-color>forest</primary-color>
+        <header-logo>logo.png</header-logo>
         <product-web-url>https://cursuskit.nl/plugins/lms-connect</product-web-url>
+        <custom-favicons>favicon.png</custom-favicons>
     </variables>
     <footer>
         <social type="blog" href="https://github.com/learnkit-dev" />
