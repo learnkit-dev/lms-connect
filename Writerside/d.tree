@@ -12,6 +12,7 @@
         <toc-element topic="Health.md"/>
         <toc-element topic="Groups.md"/>
         <toc-element topic="Groups-Scores.md"/>
+        <toc-element topic="Group-Scores.md"/>
         <toc-element topic="Users.md"/>
     </toc-element>
     <toc-element topic="SSO-IdP.md"/>

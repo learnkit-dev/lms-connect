@@ -95,3 +95,52 @@ paths:
                         type: string
                       phone:
                         type: string
+
+  /{team}/groups/{group}/scores:
+    get:
+      summary: Get all scores of users for a given group in a team
+      description: It returns a list with scores.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  users:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        email:
+                          type: string
+                        phone:
+                          type: string
+                        lms_roles:
+                          type: string
+                        last_seen_at:
+                          type: string
+                        created_at:
+                          type: string
+                        score:
+                          type: integer
+                        courses:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: string
+                              name:
+                                type: string
+                              achieved:
+                                type: boolean
+                              score:
+                                type: integer
