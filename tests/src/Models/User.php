@@ -4,7 +4,7 @@ namespace LearnKit\LmsConnect\Tests\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Sanctum\HasApiTokens;
+use Laravel\Passport\HasApiTokens;
 use LearnKit\Lms\Concerns\HasLmsAccess;
 use LearnKit\Lms\Models\Contracts\LmsUser;
 use LearnKit\LmsConnect\Tests\Database\Factories\UserFactory;

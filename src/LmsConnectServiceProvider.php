@@ -19,6 +19,8 @@ class LmsConnectServiceProvider extends ServiceProvider
             'provider' => 'users',
         ]);
 
+        Config::set('passport.guard', 'lms-connect');
+
         Passport::ignoreRoutes();
 
         $this->publishes([

@@ -1,6 +1,6 @@
 <?php
 
-use Laravel\Sanctum\Sanctum;
+use Laravel\Passport\Passport;
 use LearnKit\Lms\Models\Team;
 use LearnKit\LmsConnect\Tests\Models\User;
 use LearnKit\LmsConnect\Tests\TestCase;
@@ -12,7 +12,7 @@ it('can return all teams in the LMS', function () {
     Team::factory()->count(5)->create();
     $user = User::factory()->create();
 
-    Sanctum::actingAs($user);
+    Passport::actingAs($user, guard: 'lms-connect');
 
     $response = getJson(route('lms-connect.teams.list'));
 

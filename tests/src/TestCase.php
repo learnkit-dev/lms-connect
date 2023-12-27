@@ -5,9 +5,12 @@ namespace LearnKit\LmsConnect\Tests;
 use Filament\FilamentServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
+use Laravel\Passport\PassportServiceProvider;
 use Laravel\Pennant\PennantServiceProvider;
 use Laravel\Sanctum\SanctumServiceProvider;
 use LearnKit\Lms\LmsServiceProvider;
+use LearnKit\Lms\SsoProviders\PassportProvider;
 use LearnKit\LmsConnect\LmsConnectServiceProvider;
 use LearnKit\LmsConnect\Tests\Models\User;
 use Livewire\LivewireServiceProvider;
@@ -26,6 +29,8 @@ abstract class TestCase extends BaseTestCase
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'LearnKit\\Lms\\Database\\Factories\\' . class_basename($modelName) . 'Factory',
         );
+
+        Artisan::call('passport:install');
     }
 
     protected function getPackageProviders($app): array
@@ -36,8 +41,8 @@ abstract class TestCase extends BaseTestCase
             LivewireServiceProvider::class,
             LaravelSettingsServiceProvider::class,
             FilamentServiceProvider::class,
-            SanctumServiceProvider::class,
             LmsServiceProvider::class,
+            PassportServiceProvider::class,
             LmsConnectServiceProvider::class,
         ];
     }

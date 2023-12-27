@@ -1,6 +1,6 @@
 <?php
 
-use Laravel\Sanctum\Sanctum;
+use Laravel\Passport\Passport;
 use LearnKit\Lms\Models\Group;
 use LearnKit\LmsConnect\Tests\Models\User;
 use LearnKit\LmsConnect\Tests\TestCase;
@@ -18,7 +18,7 @@ it('can return all groups in a given team with scores', function () {
 
     $user = User::factory()->create();
 
-    Sanctum::actingAs($user);
+    Passport::actingAs($user, scopes: [], guard: 'lms-connect');
 
     $response = getJson(route('lms-connect.team.groups.scores', ['team' => $team->slug]));
 
